@@ -13,6 +13,6 @@ const skSchema = new mongoose.Schema({
   timestamps: true
 })
 
-const skModel = mongoose.model('User', skSchema)
+const skModel = mongoose.model('Sk', skSchema)
 
 module.exports = skModel
