@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 const cors = require('cors')
 const mongoose = require('mongoose')
+require('dotenv').config()
 
 mongoose.connect(`mongodb://localhost/bps_dev`)
 
