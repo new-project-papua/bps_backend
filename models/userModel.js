@@ -16,7 +16,8 @@ const userSchema = new mongoose.Schema({
   },
   username: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   password: {
     type: String,
@@ -28,7 +29,7 @@ const userSchema = new mongoose.Schema({
   },
   sk_aktif: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'sk'
+    ref: 'Sk'
   },
   no_ktp: {
     type: String

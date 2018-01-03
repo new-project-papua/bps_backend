@@ -90,4 +90,11 @@ module.exports = {
     })
     .catch(err => res.send(err))
   },
+  remove: (req, res) => {
+    User.remove({
+      _id: req.params._id
+    })
+    .then(result => res.send(result))
+    .catch(err => res.send(err))
+  }
 }
