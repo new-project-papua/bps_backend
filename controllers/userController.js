@@ -3,6 +3,13 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
 module.exports = {
+  edit: (req, res) => {
+    User.update({
+      _id: req.params.id
+    }, req.body)
+    .then(result => res.send(result))
+    .catch(err => res.send(err))
+  },
   all: (req, res) => {
     User.find()
     .then(result => res.send(result))

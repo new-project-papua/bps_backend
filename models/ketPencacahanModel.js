@@ -18,7 +18,8 @@ const ketPencacahanSchema = new mongoose.Schema({
   catatan: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Catatan'
-  }
+  },
+  waktu_selesai_wawancara: Date
 }, {
   timestamps: true
 })
